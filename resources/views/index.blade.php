@@ -37,11 +37,13 @@
                     </thead>
                     <tbody>
                         <!-- LOGIC START -->
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                        @foreach ($data as $user)
+                            <tr>
+                                <td>{{$user->id}}</td>
+                                <td>{{$user->name}}</td>
+                                <td>{{$user->parity}}</td>
+                            </tr>
+                        @endforeach
                         <!-- LOGIC END -->
                     </tbody>
                 </table>
